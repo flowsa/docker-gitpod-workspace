@@ -6,3 +6,8 @@ RUN sudo apt-get update && sudo apt-get install -y xdg-utils tree rsync
 
 RUN curl -LO https://deployer.org/releases/v6.8.0/deployer.phar && sudo mv deployer.phar /usr/local/bin/dep && sudo chmod +x /usr/local/bin/dep
 RUN curl -LO https://deployer.org/releases/v4.3.4/deployer.phar && sudo mv deployer.phar /usr/local/bin/dep4 && sudo chmod +x /usr/local/bin/dep4
+
+COPY download.sh .
+RUN bash download.sh /tmp/db drud/ddev-dbserver-mariadb-10.3:v1.19.2
+RUN bash download.sh /tmp/web drud/ddev-webserver:v1.19.2
+
