@@ -11,6 +11,7 @@ RUN sudo bash download.sh /ddev_images/web drud/ddev-webserver:v1.19.2
 RUN sudo bash download.sh /ddev_images/router drud/ddev-router:v1.19.0
 RUN sudo bash download.sh /ddev_images/ssh drud/ddev-ssh-agent:v1.19.0
 RUN sudo bash download.sh /ddev_images/phpmyadmin phpmyadmin:5
+RUN sudo bash download.sh /ddev_images/busybox busybox:stable
 
 # Install custom tools, runtime, etc.
 RUN brew install drud/ddev/ddev
